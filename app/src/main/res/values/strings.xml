@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My Sample Android App</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="welcome">Welcome</string>
+    <string name="start_worker_activity">Start Worker Activity</string>
+    <string name="start_worker">Start Worker</string>
+    <string name="cancel_worker">Cancel Worker</string>
+    <string name="web_url_intent">Web Url Intent</string>
+    <string name="start_activity_a">Start ActivityA</string>
+    <string name="user_icon">User Icon</string>
+    <string name="week6">Week 6</string>
+    <string name="week7">Week 7</string>
+    <string name="logo">Logo</string>
+    <string name="custom_view">Custom View</string>
+    <string name="type">Type</string>
+    <string name="send_broadcast">Broadcast</string>
+    <string name="message">Message</string>
+    <string name="broadcast">Broadcast</string>
+    <string name="week8">Week 8</string>
+    <string name="recycler_view">Recycler View</string>
+</resources>

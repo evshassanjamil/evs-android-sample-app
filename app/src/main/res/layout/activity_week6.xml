@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".week6.Week6Activity"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center">
+    <Button
+        android:id="@+id/btnStartActivityA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_activity_a"/>
+
+    <Button
+        android:id="@+id/btnStartWorkerActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/start_worker_activity"/>
+    <Button
+        android:id="@+id/btnWebIntent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/web_url_intent"/>
+    <Button
+        android:id="@+id/btnBroadcastActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/broadcast"/>
+</LinearLayout>

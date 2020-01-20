@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.evs.android.mysampleapp">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".SplashActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" />
+
+        <!-- WEEK 6 -->
+        <activity
+            android:name=".week6.Week6Activity"
+            android:label="@string/week6"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".week6.intent.ActivityA"
+            android:label="@string/app_name"
+            android:parentActivityName=".week6.Week6Activity" />
+        <activity
+            android:name=".week6.worker.WorkerActivity"
+            android:label="@string/start_worker"
+            android:parentActivityName=".week6.Week6Activity" />
+        <activity
+            android:name=".week6.intent.ActivityB"
+            android:label="@string/app_name"
+            android:parentActivityName=".week6.Week6Activity" />
+        <activity
+            android:name=".week6.broadcast.BroadcastActivity"
+            android:label="@string/broadcast"
+            android:parentActivityName=".week6.Week6Activity" />
+
+        <receiver
+            android:name=".week6.worker.BootCompleteReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- WEEK 7 -->
+        <activity
+            android:name=".week7.Week7Activity"
+            android:label="@string/week7"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".week7.customview.CVActivity"
+            android:label="@string/custom_view"
+            android:parentActivityName=".week7.Week7Activity" />
+
+        <!-- WEEK 8-->
+        <activity
+            android:name=".week8.Week8Activity"
+            android:label="@string/week8"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".week8.recyclerview.ListActivity"
+            android:label="@string/recycler_view"
+            android:parentActivityName=".week8.Week8Activity" />
+
+        <!-- WEEK 9-->
+    </application>
+
+</manifest>
