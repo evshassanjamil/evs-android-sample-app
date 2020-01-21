@@ -20,4 +20,7 @@
     <string name="broadcast">Broadcast</string>
     <string name="week8">Week 8</string>
     <string name="recycler_view">Recycler View</string>
+    <string name="week9">Week 9</string>
+    <string name="animation">Animation</string>
+    <string name="animate_bitmaps">Animate Bitmaps</string>
 </resources>

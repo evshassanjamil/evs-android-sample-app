@@ -27,4 +27,11 @@
             android:layout_height="wrap_content"
             android:text="@string/week8"
             android:layout_gravity="center_horizontal"/>
+
+        <Button
+            android:id="@+id/btnWeek9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/week9"
+            android:layout_gravity="center_horizontal" />
 </LinearLayout>
