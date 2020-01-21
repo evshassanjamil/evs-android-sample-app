@@ -24,7 +24,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     private ArrayList<Item> dataList = new ArrayList<>();
     private OnListItemClickListener mListener;
     @LayoutRes
-    private final int layoutResIdContent;
+    private final int layoutResIdContent = R.layout.list_item;
     private static final int VIEW_TYPE_ITEM1 = 1;
     //private static final int VIEW_TYPE_ITEM2 = 2;
 
@@ -34,7 +34,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
             dataList.clear();
         else
             dataList = (ArrayList<Item>) listData.clone();
-        layoutResIdContent = R.layout.list_item;
     }
 
     @NonNull
@@ -121,13 +120,15 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
 
     private void loadImage(ItemContentViewHolder viewHolder, String url) {
 
-        final Picasso picasso = PicassoTrustAll.getInstance(mContext);
+        //final Picasso picasso = PicassoTrustAll.getInstance(mContext);
+        final Picasso picasso = Picasso.get();
         picasso.setIndicatorsEnabled(false);
         picasso.load(url)
                 .fit()
                 .centerCrop()
                 .placeholder(R.drawable.ic_filter_hdr)
-                .error(R.drawable.ic_cancel)
+                .error(R.drawable.ic_broken_image)
+                //.transform(new CropCircleTransformation())
                 .into(viewHolder.ivImage, new Callback() {
                     @Override
                     public void onSuccess() {
@@ -135,21 +136,11 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
                     }
 
                     @Override
-                    public void onError(Exception e) {
-                        if(e != null && e.getMessage() != null)
+                    public void onError(@NonNull Exception e) {
+                        if (e.getMessage() != null) {
                             Log.e(MyRecyclerViewAdapter.class.getSimpleName(), e.getMessage());
-
-                        //Try again online if cache failed
-                        picasso.load(url)
-                                .into(viewHolder.ivImage, new Callback() {
-                                    @Override
-                                    public void onSuccess() { }
-
-                                    @Override
-                                    public void onError(Exception e) {
-                                        e.printStackTrace();
-                                    }
-                                });
+                            e.printStackTrace();
+                        }
                     }
                 });
 

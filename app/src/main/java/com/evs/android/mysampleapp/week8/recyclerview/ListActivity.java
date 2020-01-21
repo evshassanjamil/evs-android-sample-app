@@ -1,11 +1,11 @@
 package com.evs.android.mysampleapp.week8.recyclerview;
 
+import android.os.Bundle;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.widget.Toast;
 
 import com.evs.android.mysampleapp.R;
 
@@ -22,15 +22,15 @@ public class ListActivity extends AppCompatActivity {
 
         ArrayList<Item> listData = new ArrayList<>();
         listData.add(new Item(1, "Coca Cola", "Beverages", 50,
-                "https://mysinbad.com/wp-content/uploads/2019/09/50-COCA-COLA-500ML.jpg"));
+                "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0016/9323/brand.gif"));
         listData.add(new Item(2, "Sprite", "Beverages", 50,
-                "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Sprite_logo.jpg/220px-Sprite_logo.jpg"));
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN5LGU9oDDvPirToSmpJd_Eb8Ny7J5-M1yuMe4rOqORF0sWYoF&s"));
         listData.add(new Item(3, "Fruita Vitals", "Beverages", 150,
-                "https://nayadaur.tv/wp-content/uploads/2019/08/maxresdefault.jpg"));
+                "https://www.nestle.pk/sites/g/files/pydnoa361/files/fruita-logo.jpg"));
         listData.add(new Item(4, "Milk Pak", "Dairy", 40,
                 "https://www.brandsaward.com/application/assets/images/boya-winners/milkpak-logo.jpg"));
         listData.add(new Item(5, "Dalda", "Oil & Ghee", 210,
-                "https://www.daldafoods.com/wp-content/uploads/2017/03/logo.jpg"));
+                "https://www.careerz360.com/cdn.careerz360.com/Content/UserData/empr/e8ded2f5-28a4-4abc-a280-57a693cd0f40/profile_pics/thumbnail_b0bae04d-4ead-41fd-a0c6-af9472add3d5.png"));
         listData.add(new Item(6, "Apple", "Fruit", 130,
                 "https://sc01.alicdn.com/kf/ULB8w6e6KOaMiuJk43PTq6ySmXXaR/Fresh-red-delicious-apple-products.jpg_350x350.jpg"));
         listData.add(new Item(7, "Tez Dum", "Tea", 800,
