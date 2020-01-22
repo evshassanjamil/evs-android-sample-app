@@ -23,7 +23,7 @@ public class Week6Activity extends AppCompatActivity {
         setContentView(R.layout.activity_week6);
         Log.d(TAG, "onCreate() called");
 
-        findViewById(R.id.btnStartActivityA).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnIntentActivity).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Week6Activity.this, ActivityA.class));

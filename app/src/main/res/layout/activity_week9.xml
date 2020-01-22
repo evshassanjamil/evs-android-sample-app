@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     tools:context=".week9.Week9Activity"
     android:padding="10dp"
+    android:orientation="vertical"
     android:gravity="center">
 
     <Button
@@ -12,4 +13,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/animate_bitmaps" />
+
+    <Button
+        android:id="@+id/btnSharedPreferences"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shared_preferences" />
+
+    <Button
+        android:id="@+id/btnAlertDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/alert_dialog" />
 </LinearLayout>

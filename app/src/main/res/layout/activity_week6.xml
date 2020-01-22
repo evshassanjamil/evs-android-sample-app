@@ -8,10 +8,10 @@
     android:padding="10dp"
     android:gravity="center">
     <Button
-        android:id="@+id/btnStartActivityA"
+        android:id="@+id/btnIntentActivity"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/start_activity_a"/>
+        android:text="@string/explicit_intent_activity" />
 
     <Button
         android:id="@+id/btnStartWorkerActivity"
@@ -22,7 +22,7 @@
         android:id="@+id/btnWebIntent"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/web_url_intent"/>
+        android:text="@string/implicit_intent" />
     <Button
         android:id="@+id/btnBroadcastActivity"
         android:layout_width="match_parent"

@@ -12,18 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".week9.dialog.DialogActivity"></activity>
         <!-- LAUNCHER ACTIVITY -->
         <activity
             android:name=".SplashActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" /> <!-- WEEK 6 -->
+            android:label="@string/app_name" />
+
+        <!-- WEEK 6 -->
         <activity
             android:name=".week6.Week6Activity"
             android:label="@string/week6"
