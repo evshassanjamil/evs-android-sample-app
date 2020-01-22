@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal" android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_marginTop="16dp"
@@ -15,7 +16,7 @@
             android:id="@+id/ivImage"
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/ic_filter_hdr"
+            app:srcCompat="@drawable/ic_filter_hdr"
             android:scaleType="centerCrop"/>
 
         <LinearLayout
