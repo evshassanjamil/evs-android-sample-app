@@ -42,7 +42,7 @@ public class AppUtils {
     @SuppressWarnings("unused")
     public static boolean isValidEmail(String email) {
         boolean isValid = false;
-        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+        String expression = "^[\\w.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
 
         Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
         Matcher matcher = pattern.matcher(email);

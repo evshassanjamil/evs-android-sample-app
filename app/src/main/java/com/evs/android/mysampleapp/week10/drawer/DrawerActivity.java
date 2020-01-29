@@ -63,6 +63,7 @@ public class DrawerActivity extends AppCompatActivity {
                 });
         // Setting Hamburger color icon
         mDrawerManager.setHamburgerIconColor(R.color.white);
+        setDrawerMenusVisibility();
 
         // Instantiating ToolbarManager
         mTbManager = new ToolbarManager(this, toolbar,
@@ -87,6 +88,13 @@ public class DrawerActivity extends AppCompatActivity {
 
     private void init() {
         mFragmentNavigator = new FragmentNavigator(this, getSupportFragmentManager());
+    }
+
+    private void setDrawerMenusVisibility() {
+        // Setting Drawer Menu Visibility based on user logged in status
+        boolean loggedIn = AppPreferences.getInstance(this).isUserLoggedIn();
+        mDrawerManager.setDrawerMenuVisible(R.id.mi_drawer_item_sign_in, !loggedIn);
+        mDrawerManager.setDrawerMenuVisible(R.id.mi_drawer_item_logout, loggedIn);
     }
 
     private void selectDrawerItem(MenuItem item) {

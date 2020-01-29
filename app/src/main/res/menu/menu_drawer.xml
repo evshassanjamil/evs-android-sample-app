@@ -14,7 +14,7 @@
         android:checkableBehavior="none">
         <item
             android:id="@+id/mi_drawer_item_home"
-            android:icon="@drawable/ic_menu"
+            android:icon="@drawable/ic_home"
             android:title="@string/home" />
     </group>
 
