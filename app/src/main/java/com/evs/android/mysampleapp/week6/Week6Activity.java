@@ -13,6 +13,11 @@ import com.evs.android.mysampleapp.week6.broadcast.BroadcastActivity;
 import com.evs.android.mysampleapp.week6.intent.ActivityA;
 import com.evs.android.mysampleapp.week6.worker.WorkerActivity;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class Week6Activity extends AppCompatActivity {
 
     public final String TAG = Week6Activity.class.getSimpleName();

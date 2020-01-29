@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/menu_drawer_grp1"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/mi_drawer_item_sign_in"
+            android:icon="@drawable/ic_person"
+            android:title="@string/login" />
+    </group>
+
+    <group
+        android:id="@+id/menu_drawer_grp2"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/mi_drawer_item_home"
+            android:icon="@drawable/ic_menu"
+            android:title="@string/home" />
+    </group>
+
+    <group
+        android:id="@+id/menu_drawer_grp3"
+        android:checkableBehavior="none">
+        <item
+            android:id="@+id/mi_drawer_item_logout"
+            android:title="@string/logout"
+            android:icon="@drawable/ic_logout"
+            android:visible="true" />
+    </group>
+</menu>

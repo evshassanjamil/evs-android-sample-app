@@ -6,6 +6,11 @@ import android.os.Handler;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class SplashActivity extends AppCompatActivity {
 
     @Override
@@ -16,11 +21,11 @@ public class SplashActivity extends AppCompatActivity {
         long splashTime = 2 * 1000;     // 2s = 2000ms
 
         (new Handler()).postDelayed(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            finish();
-                                            startActivity(new Intent(SplashActivity.this, MainActivity.class));
-                                        }
-                                    }, splashTime);
+            @Override
+            public void run() {
+                finish();
+                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+            }
+        }, splashTime);
     }
 }

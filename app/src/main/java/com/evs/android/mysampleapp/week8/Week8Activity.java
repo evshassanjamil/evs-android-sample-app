@@ -1,14 +1,19 @@
 package com.evs.android.mysampleapp.week8;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.evs.android.mysampleapp.R;
 import com.evs.android.mysampleapp.week8.recyclerview.ListActivity;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class Week8Activity extends AppCompatActivity {
 
     @Override

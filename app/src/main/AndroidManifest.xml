@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".week9.dialog.DialogActivity"></activity>
+
         <!-- LAUNCHER ACTIVITY -->
         <activity
             android:name=".SplashActivity"
@@ -87,6 +90,24 @@
             android:name=".week9.animate.bitmaps.AnimateBitmapsActivity"
             android:label="@string/animate_bitmaps"
             android:parentActivityName=".week9.Week9Activity" />
+        <activity
+            android:name=".week9.permission.PermissionActivity"
+            android:label="@string/permission"
+            android:parentActivityName=".week9.Week9Activity" />
+        <activity
+            android:name=".week9.dialog.DialogActivity"
+            android:label="@string/alert_dialog"
+            android:parentActivityName=".week9.Week9Activity" />
+
+        <!-- WEEK 10-->
+        <activity
+            android:name=".week10.Week10Activity"
+            android:label="@string/week10"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".week10.drawer.DrawerActivity"
+            android:label="@string/drawer_activity"
+            android:theme="@style/AppThemeNoActionBar" />
     </application>
 
 </manifest>

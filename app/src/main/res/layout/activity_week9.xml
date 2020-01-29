@@ -15,6 +15,12 @@
         android:text="@string/animate_bitmaps" />
 
     <Button
+        android:id="@+id/btnPermission"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/permission" />
+
+    <Button
         android:id="@+id/btnSharedPreferences"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

@@ -9,6 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.evs.android.mysampleapp.R;
 import com.evs.android.mysampleapp.week9.preference.AppPreferences;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class ActivityB extends AppCompatActivity {
 
     @Override

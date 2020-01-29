@@ -12,6 +12,11 @@ import androidx.work.WorkerParameters;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class MyWorker extends Worker {
 
     public final String TAG = MyWorker.class.getSimpleName();

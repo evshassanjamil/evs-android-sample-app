@@ -10,6 +10,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.evs.android.mysampleapp.R;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class DialogActivity extends AppCompatActivity {
 
     @Override
@@ -31,7 +36,6 @@ public class DialogActivity extends AppCompatActivity {
                         ((ImageView) findViewById(R.id.ivResult)).setImageResource(R.drawable.ic_check_circle);
                         findViewById(R.id.btnAskQuestion).setVisibility(View.GONE);
                         findViewById(R.id.ivResult).setVisibility(View.VISIBLE);
-
                     }
                 });
                 builder.setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {

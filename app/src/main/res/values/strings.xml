@@ -36,4 +36,25 @@
     <string name="question">Are you the student of EVS?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="ask_permission">Ask Permission</string>
+
+    <string name="reason_storage_permission">Please allow the app to access storage. Denying it will
+        cause no longer function as intended. You can allow permission by
+        Go To Settings > Permissions > Enable Permission Switch</string>
+    <string name="go_to_settings">Go to Settings</string>
+    <string name="str_retry">Retry</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="permission">Permission</string>
+    <string name="drawer_activity">Drawer Activity</string>
+    <string name="week10">Week 10</string>
+    <string name="login">Login</string>
+    <string name="home">Home</string>
+    <string name="language">Language</string>
+    <string name="more">More</string>
+    <string name="cover">Cover</string>
+    <string name="fragment_not_exists_in_backstack">Fragment not exists in backstack</string>
+    <string name="exit">Exit</string>
+    <string name="dialog_exit_message">Do you really want to exit the activity?</string>
+    <string name="cart">Cart</string>
+    <string name="flag">Flag</string>
 </resources>

@@ -11,6 +11,11 @@ import com.evs.android.mysampleapp.R;
 
 import java.util.ArrayList;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class ListActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
@@ -62,8 +67,8 @@ public class ListActivity extends AppCompatActivity {
     }
 
     /*
-    * UTILITY METHODS
-    */
+     * UTILITY METHODS
+     */
 
     Toast toast;
 

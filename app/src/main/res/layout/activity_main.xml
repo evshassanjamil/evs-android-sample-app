@@ -6,32 +6,35 @@
     tools:context=".MainActivity"
     android:orientation="vertical"
     android:padding="10dp">
-
         <Button
             android:id="@+id/btnWeek6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/week6"
             android:layout_gravity="center_horizontal"/>
-
         <Button
             android:id="@+id/btnWeek7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/week7"
             android:layout_gravity="center_horizontal"/>
-
         <Button
             android:id="@+id/btnWeek8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/week8"
             android:layout_gravity="center_horizontal"/>
-
         <Button
             android:id="@+id/btnWeek9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/week9"
             android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/btnWeek10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/week10"
+        android:layout_gravity="center_horizontal" />
 </LinearLayout>

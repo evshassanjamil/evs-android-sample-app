@@ -19,7 +19,8 @@ import javax.net.ssl.X509TrustManager;
 import okhttp3.OkHttpClient;
 
 /**
- * Created by hassanjamil on 13/01/2020.
+ * Created by hassanjamil on 01/29/2020.
+ *
  * @author hassanjamil
  */
 public class PicassoTrustAll {

@@ -1,14 +1,17 @@
 package com.evs.android.mysampleapp.week7.customview;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.evs.android.mysampleapp.R;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class CVActivity extends AppCompatActivity {
 
     @Override

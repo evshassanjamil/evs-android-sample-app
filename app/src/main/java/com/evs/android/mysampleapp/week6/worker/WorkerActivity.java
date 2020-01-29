@@ -7,6 +7,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.evs.android.mysampleapp.R;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class WorkerActivity extends AppCompatActivity {
 
     @Override

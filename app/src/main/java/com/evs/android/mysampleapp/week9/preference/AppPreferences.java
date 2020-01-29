@@ -8,6 +8,11 @@ import androidx.annotation.NonNull;
 
 import com.evs.android.mysampleapp.utils.AppUtils;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class AppPreferences {
 
     private static AppPreferences mInstance;
@@ -47,7 +52,8 @@ public class AppPreferences {
     }
 
     public boolean isUserLoggedIn() {
-        return AppUtils.isValidString(getUserEmail());
+        String email = mPreference.getString(PREF_KEY_USER_EMAIL, null);
+        return AppUtils.isValidString(email);
     }
 
     public boolean isRememberLogin() {

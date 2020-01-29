@@ -5,6 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.widget.Toast;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class MyBroadcastReceiver extends BroadcastReceiver {
 
     public static final String ACTION = "com.evs.android.MESSAGE";

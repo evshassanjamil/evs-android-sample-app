@@ -7,11 +7,17 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.evs.android.mysampleapp.week10.Week10Activity;
 import com.evs.android.mysampleapp.week6.Week6Activity;
 import com.evs.android.mysampleapp.week7.Week7Activity;
 import com.evs.android.mysampleapp.week8.Week8Activity;
 import com.evs.android.mysampleapp.week9.Week9Activity;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class MainActivity extends AppCompatActivity {
 
     public final String TAG = MainActivity.class.getSimpleName();
@@ -47,6 +53,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Week9Activity.class));
+            }
+        });
+
+        findViewById(R.id.btnWeek10).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Week10Activity.class));
             }
         });
     }

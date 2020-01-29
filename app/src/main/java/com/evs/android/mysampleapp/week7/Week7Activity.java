@@ -9,6 +9,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.evs.android.mysampleapp.R;
 import com.evs.android.mysampleapp.week7.customview.CVActivity;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class Week7Activity extends AppCompatActivity {
 
     //public final String TAG = Week7Activity.class.getSimpleName();

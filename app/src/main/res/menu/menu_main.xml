@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:mContext=".MainActivity">
+    <item
+        android:id="@+id/mi_change_lang"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_language"
+        android:visible="true"
+        android:title="@string/language"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mi_main_cart"
+        android:icon="@drawable/ic_shopping_cart"
+        android:orderInCategory="100"
+        android:visible="true"
+        android:title="@string/cart"
+        app:showAsAction="ifRoom" />
+</menu>

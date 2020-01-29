@@ -10,7 +10,13 @@ import com.evs.android.mysampleapp.R;
 import com.evs.android.mysampleapp.week6.intent.ActivityA;
 import com.evs.android.mysampleapp.week9.animate.bitmaps.AnimateBitmapsActivity;
 import com.evs.android.mysampleapp.week9.dialog.DialogActivity;
+import com.evs.android.mysampleapp.week9.permission.PermissionActivity;
 
+/**
+ * Created by hassanjamil on 01/29/2020.
+ *
+ * @author hassanjamil
+ */
 public class Week9Activity extends AppCompatActivity {
 
     @Override
@@ -22,6 +28,13 @@ public class Week9Activity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(Week9Activity.this, AnimateBitmapsActivity.class));
+            }
+        });
+
+        findViewById(R.id.btnPermission).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(Week9Activity.this, PermissionActivity.class));
             }
         });
 
