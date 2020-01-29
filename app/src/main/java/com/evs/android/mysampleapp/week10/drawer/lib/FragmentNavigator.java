@@ -9,8 +9,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.evs.android.mysampleapp.R;
 
-import java.util.ArrayList;
-
 /**
  * Created by hassanjamil on 01/29/2020.
  *
@@ -21,12 +19,6 @@ public class FragmentNavigator implements FragmentManager.OnBackStackChangedList
     private final FragmentManager mFragmentManager;
     private final Context mContext;
     private static final String TAG = FragmentNavigator.class.getSimpleName();
-    private final ArrayList<FragmentState> mListFragmentStates = new ArrayList<>();
-
-    public class FragmentState {
-        public String tag;
-        public boolean isHidden = false;
-    }
 
     public FragmentNavigator(Context context, final FragmentManager fragmentManager) {
         mContext = context;
@@ -43,13 +35,10 @@ public class FragmentNavigator implements FragmentManager.OnBackStackChangedList
         popBackStackFull();
 
         FragmentTransaction fragmentTransaction = getFragmentManager().beginTransaction();
-        //fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out,
-        // android.R.anim.fade_in, android.R.anim.fade_out);
+        /*fragmentTransaction.setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out,
+                android.R.anim.fade_in, android.R.anim.fade_out);*/
         fragmentTransaction.replace(R.id.frame_layout_main, fragment, tag);
         fragmentTransaction.commit();
-
-        // Managing fragments hidden state
-        addFragmentState(tag, false);
     }
 
     public void addFragment(Fragment fragment, String tag) {
@@ -58,79 +47,7 @@ public class FragmentNavigator implements FragmentManager.OnBackStackChangedList
         fragmentTransaction.add(R.id.frame_layout_main, fragment, tag);
         fragmentTransaction.addToBackStack(tag);
         fragmentTransaction.commit();
-
-
-        addFragmentState(tag, false);
     }
-
-
-    ////////////////////////// Fragment States ////////////////////////////
-
-    @SuppressWarnings("SameParameterValue")
-    private void addFragmentState(String tag, boolean isHidden) {
-        FragmentState state = new FragmentState();
-        state.tag = tag;
-        state.isHidden = isHidden;
-        mListFragmentStates.add(state);
-    }
-
-    private void updateFragmentStateForTag(String tag, boolean isHidden) {
-        for (FragmentState state : mListFragmentStates) {
-            if (state.tag.equals(tag)) {
-                state.isHidden = isHidden;
-            }
-        }
-    }
-
-    private void updateAllFragmentStateAsHidden() {
-        for (int i = 0; i < mListFragmentStates.size(); i++) {
-            mListFragmentStates.get(i).isHidden = true;
-        }
-    }
-
-    /**
-     * @return 1 = hidden, 0 = shown, -1 = unknown
-     */
-    public int isFragmentHiddenForTag(String tag) {
-        for (FragmentState state : mListFragmentStates) {
-            if (state.tag.equals(tag)) {
-                if (state.isHidden)
-                    return 1;
-                else
-                    return 0;
-            }
-        }
-        return -1;
-    }
-
-    @SuppressWarnings("unused")
-    private void removeLastFragmentState() {
-        mListFragmentStates.remove(mListFragmentStates.size() - 1);
-    }
-
-    @SuppressWarnings("unused")
-    private void removeFragmentStateForPosition(int position) {
-        mListFragmentStates.remove(position);
-    }
-
-    private void removeFragmentStateForTag(String tag) {
-        for (int i = 0; i < mListFragmentStates.size(); i++) {
-            if (mListFragmentStates.get(i).tag.equals(tag)) {
-                mListFragmentStates.remove(i);
-            }
-        }
-    }
-
-    private void clearAllFragmentStateList() {
-        mListFragmentStates.clear();
-    }
-
-    private void clearFragmentStateListExceptFirstElement() {
-        for (int i = mListFragmentStates.size(); i > 0; i--) {
-            mListFragmentStates.remove(i);
-        }
-    }
-
 
     ////////////////////////////// UTILITY FUNCTIONS ///////////////////////////////
 
@@ -147,8 +64,6 @@ public class FragmentNavigator implements FragmentManager.OnBackStackChangedList
         Fragment fragment = getFragmentForTag(tag);
         if (fragment != null) {
             showHideFragment(fragment, show);
-
-            updateFragmentStateForTag(tag, !show);
         } else
             Log.e(TAG, mContext.getString(R.string.fragment_not_exists_in_backstack));
     }
@@ -167,11 +82,9 @@ public class FragmentNavigator implements FragmentManager.OnBackStackChangedList
         for (Fragment fragmentToHide : getFragmentManager().getFragments()) {
             showHideFragment(fragmentToHide, false);
         }
-        updateAllFragmentStateAsHidden();
 
 
         showHideFragmentForTag(tag, true);
-        updateFragmentStateForTag(tag, false);
     }
 
     @SuppressWarnings("unused")
@@ -181,8 +94,6 @@ public class FragmentNavigator implements FragmentManager.OnBackStackChangedList
             removeFragment(fragment);
         else
             Log.e(TAG, "removeFragmentForTag(): " + mContext.getString(R.string.fragment_not_exists_in_backstack));
-
-        removeFragmentStateForTag(tag);
     }
 
     private void removeFragment(Fragment fragment) {
@@ -206,8 +117,6 @@ public class FragmentNavigator implements FragmentManager.OnBackStackChangedList
                 getFragmentManager().popBackStack();
             }
         }
-
-        clearAllFragmentStateList();
     }
 
     public void popBackStackExceptRoot() {
@@ -216,8 +125,6 @@ public class FragmentNavigator implements FragmentManager.OnBackStackChangedList
                 getFragmentManager().popBackStack();
             }
         }
-
-        clearFragmentStateListExceptFirstElement();
     }
 
     @Override
