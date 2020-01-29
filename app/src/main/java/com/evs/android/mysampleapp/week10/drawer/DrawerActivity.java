@@ -47,19 +47,20 @@ public class DrawerActivity extends AppCompatActivity {
                         selectDrawerItem(item);
                         return false;
                     }
-                }, new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Close the navigation drawer
-                if (mDrawerManager != null)
-                    mDrawerManager.closeDrawer();
+                },
+                new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // Close the navigation drawer
+                        if (mDrawerManager != null)
+                            mDrawerManager.closeDrawer();
 
-                if (AppPreferences.getInstance(DrawerActivity.this).isUserLoggedIn())
-                    AppUtils.showToastShort(DrawerActivity.this, "User Logged In");
-                else
-                    AppUtils.showToastShort(DrawerActivity.this, "User not Logged In");
-            }
-        });
+                        if (AppPreferences.getInstance(DrawerActivity.this).isUserLoggedIn())
+                            AppUtils.showToastShort(DrawerActivity.this, "User Logged In");
+                        else
+                            AppUtils.showToastShort(DrawerActivity.this, "User not Logged In");
+                    }
+                });
         // Setting Hamburger color icon
         mDrawerManager.setHamburgerIconColor(R.color.white);
 
