@@ -47,8 +47,7 @@ public class AppPreferences {
     }
 
     public boolean isUserLoggedIn() {
-        String email = mPreference.getString(PREF_KEY_USER_EMAIL, null);
-        return AppUtils.isValidString(email);
+        return AppUtils.isValidString(getUserEmail());
     }
 
     public boolean isRememberLogin() {
