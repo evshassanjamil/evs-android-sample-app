@@ -8,7 +8,6 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
-import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -84,17 +83,12 @@ public class PermissionActivity extends AppCompatActivity {
                         dialogReasonPermission();
                     }
                 } else {
-                    // TODO You can do work at granted event here
+                    // TODO You can do work on permission granted event from here
+                    updateUI();
                 }
-                updateUI();
+
             }
         }
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        updateUI();
     }
 
     @Override
@@ -102,8 +96,14 @@ public class PermissionActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
 
         if (requestCode == RC_APP_SETTING) {
-            Log.d("Permissions", "ResultCode:" + resultCode);
+            updateUI();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        //updateUI();
     }
 
     private void dialogReasonPermission() {
