@@ -11,6 +11,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.evs.android.mysampleapp.R;
 import com.evs.android.mysampleapp.utils.AppUtils;
+import com.evs.android.mysampleapp.week10.drawer.lib.DrawerManager;
 import com.evs.android.mysampleapp.week10.drawer.lib.FragmentNavigator;
 import com.evs.android.mysampleapp.week10.drawer.lib.ToolbarManager;
 import com.evs.android.mysampleapp.week9.preference.AppPreferences;
@@ -69,7 +70,7 @@ public class DrawerActivity extends AppCompatActivity {
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.mi_main_cart:
-                        mFragmentNavigator.addFragment(new CartFragment(), CartFragment.class.getSimpleName());
+                        onCartMenuClick();
                         break;
                     case R.id.mi_change_lang:
                         AppUtils.showToastShort(DrawerActivity.this, "Language Menu Clicked");
@@ -131,6 +132,10 @@ public class DrawerActivity extends AppCompatActivity {
 
     private void onLoginMenuClick() {
         mFragmentNavigator.addFragment(new LoginFragment(), LoginFragment.class.getSimpleName());
+    }
+
+    private void onCartMenuClick() {
+        mFragmentNavigator.addFragment(new CartFragment(), CartFragment.class.getSimpleName());
     }
 
     private void closeDrawerIfOpen() {

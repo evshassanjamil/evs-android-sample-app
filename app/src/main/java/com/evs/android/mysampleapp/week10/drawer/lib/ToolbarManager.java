@@ -9,7 +9,6 @@ import android.view.View;
 import androidx.annotation.IdRes;
 
 import com.evs.android.mysampleapp.R;
-import com.evs.android.mysampleapp.week10.drawer.DrawerManager;
 
 import java.util.Stack;
 

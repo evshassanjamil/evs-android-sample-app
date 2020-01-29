@@ -1,4 +1,4 @@
-package com.evs.android.mysampleapp.week10.drawer;
+package com.evs.android.mysampleapp.week10.drawer.lib;
 
 import android.app.Activity;
 import android.content.Context;
