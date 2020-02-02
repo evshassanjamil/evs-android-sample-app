@@ -124,8 +124,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
     private void loadImage(ItemContentViewHolder viewHolder, String url) {
-
-        //final Picasso picasso = PicassoTrustAll.getInstance(mContext);
         final Picasso picasso = Picasso.get();
         picasso.setIndicatorsEnabled(false);
         picasso.load(url)

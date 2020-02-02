@@ -83,7 +83,7 @@ public class PermissionActivity extends AppCompatActivity {
                         dialogReasonPermission();
                     }
                 } else {
-                    // TODO You can do work on permission granted event from here
+                    // TODO You can start work on permission granted from here
                     updateUI();
                 }
 
