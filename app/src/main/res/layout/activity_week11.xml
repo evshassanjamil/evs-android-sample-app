@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".week11.Week11Activity"
+    android:padding="10dp"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/btnActionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/actionbar" />
+
+    <Button
+        android:id="@+id/btnViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/viewpager" />
+
+    <Button
+        android:id="@+id/btnSqlite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sqlite" />
+</LinearLayout>

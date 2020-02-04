@@ -122,7 +122,7 @@ public class ToolbarManager {
                     mDrawerManager.getActionBarDrawerToggle().setDrawerIndicatorEnabled(true);
                 } else {
                     mDrawerManager.getActionBarDrawerToggle().setDrawerIndicatorEnabled(false);
-                    mToolbar.setNavigationIcon(R.drawable.ic_arrow_back);
+                    mToolbar.setNavigationIcon(R.drawable.ic_arrow_back_color);
                 }
             }
 
@@ -131,9 +131,9 @@ public class ToolbarManager {
 
             // Visibility of menu items
             if (toolbar.getToolbarType().equals(ToolBarType.NONE))
-                setMenuVisible(R.id.mi_main_cart, false);
+                setMenuVisible(R.id.mi_cart, false);
             else
-                setMenuVisible(R.id.mi_main_cart, true);
+                setMenuVisible(R.id.mi_cart, true);
 
             mToolbar.postInvalidate();
             ((Activity) mContext).onPrepareOptionsMenu(mToolbar.getMenu());
@@ -164,7 +164,7 @@ public class ToolbarManager {
 
     public void setMenuVisible(@IdRes int itemResId, boolean visible) {
         if (mToolbar != null && mToolbar.getMenu() != null)
-            mToolbar.getMenu().findItem(R.id.mi_main_cart).setVisible(visible);
+            mToolbar.getMenu().findItem(R.id.mi_cart).setVisible(visible);
     }
 
 

@@ -71,7 +71,7 @@ public class DrawerActivity extends AppCompatActivity {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 switch (item.getItemId()) {
-                    case R.id.mi_main_cart:
+                    case R.id.mi_cart:
                         onCartMenuClick();
                         break;
                     case R.id.mi_change_lang:

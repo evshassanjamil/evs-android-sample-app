@@ -3,7 +3,6 @@
     package="com.evs.android.mysampleapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
@@ -99,7 +98,7 @@
             android:label="@string/alert_dialog"
             android:parentActivityName=".week9.Week9Activity" />
 
-        <!-- WEEK 10-->
+        <!-- WEEK 10 -->
         <activity
             android:name=".week10.Week10Activity"
             android:label="@string/week10"
@@ -108,6 +107,25 @@
             android:name=".week10.drawer.DrawerActivity"
             android:label="@string/drawer_activity"
             android:theme="@style/AppThemeNoActionBar" />
+
+        <!-- WEEK 11 -->
+        <activity
+            android:name=".week11.Week11Activity"
+            android:label="@string/week11"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".week11.viewpager.ViewPagerActivity"
+            android:label="@string/viewpager"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".week11.actionbar.ActionbarActivity"
+            android:label="@string/actionbar"
+            android:parentActivityName=".week11.Week11Activity" />
+        <activity
+            android:name=".week11.sqlite.SqliteActivity"
+            android:label="@string/sqlite"
+            android:parentActivityName=".week11.Week11Activity" />
+
     </application>
 
 </manifest>

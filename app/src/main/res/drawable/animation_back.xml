@@ -5,6 +5,6 @@
         android:drawable="@drawable/ic_menu"
         android:duration="200" />
     <item
-        android:drawable="@drawable/ic_arrow_back"
+        android:drawable="@drawable/ic_arrow_back_color"
         android:duration="200" />
 </animation-list>

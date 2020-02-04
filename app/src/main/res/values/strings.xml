@@ -57,4 +57,9 @@
     <string name="dialog_exit_message">Do you really want to exit the activity?</string>
     <string name="cart">Cart</string>
     <string name="flag">Flag</string>
+    <string name="actionbar">Actionbar</string>
+    <string name="viewpager">ViewPager</string>
+    <string name="sqlite">Sqlite</string>
+    <string name="week11">Week 11</string>
+    <string name="lorem_ipsum">dksfhsdfsdkjf sdfjh sdfkjsd fjsad fkjsd fksdh fkjsd fsadj fsdjk fksad fkdsjf sd fksd jfadsj fjksd</string>
 </resources>

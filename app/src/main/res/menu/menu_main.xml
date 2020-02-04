@@ -10,7 +10,7 @@
         android:title="@string/language"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/mi_main_cart"
+        android:id="@+id/mi_cart"
         android:icon="@drawable/ic_shopping_cart"
         android:orderInCategory="100"
         android:visible="true"
