@@ -77,7 +77,7 @@ public class AppUtils {
      * @return boolean true for valid, false for invalid
      */
     public static boolean isValidString(String str) {
-        return str != null && !(TextUtils.isEmpty(str.trim()) || str.trim().equals(""));
+        return str != null && !(TextUtils.isEmpty(str.trim()) || str.trim().equals("")) && !str.trim().equalsIgnoreCase("null");
     }
 
     /**

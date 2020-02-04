@@ -6,7 +6,6 @@ import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -71,7 +70,7 @@ public class ActivityA extends AppCompatActivity {
 
                             String msg = getString(R.string.wrong_password);
                             Log.e(TAG, msg);
-                            Toast.makeText(ActivityA.this, msg, Toast.LENGTH_SHORT).show();
+                            AppUtils.showToastShort(ActivityA.this, msg);
                         } else {
                             etPassword.setError(null);
                             // Saving Preferences
