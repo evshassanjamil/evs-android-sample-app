@@ -74,4 +74,9 @@ public class AppPreferences {
         mEditor.remove(PREF_KEY_REMEMBER_LOGIN);
         mEditor.commit();
     }
+
+    public void clearAll() {
+        mEditor.clear();
+        mEditor.commit();
+    }
 }

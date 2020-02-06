@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.evs.android.mysampleapp.R;
 import com.evs.android.mysampleapp.week11.actionbar.ActionbarActivity;
+import com.evs.android.mysampleapp.week11.sqlite.SqliteActivity;
 import com.evs.android.mysampleapp.week11.viewpager.ViewPagerActivity;
 
 public class Week11Activity extends AppCompatActivity {
@@ -31,11 +32,11 @@ public class Week11Activity extends AppCompatActivity {
             }
         });
 
-        /*findViewById(R.id.btnSqlite).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btnSqlite).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Week11Activity.this, SqliteActivity.class));
             }
-        });*/
+        });
     }
 }

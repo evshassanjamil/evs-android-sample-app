@@ -62,4 +62,9 @@
     <string name="sqlite">Sqlite</string>
     <string name="week11">Week 11</string>
     <string name="lorem_ipsum">dksfhsdfsdkjf sdfjh sdfkjsd fjsad fkjsd fksdh fkjsd fsadj fsdjk fksad fkdsjf sd fksd jfadsj fjksd</string>
+    <string name="phone">Phone</string>
+    <string name="add">Add</string>
+    <string name="get">Get</string>
+    <string name="clearDb">Clear Db</string>
+    <string name="test">Test</string>
 </resources>
