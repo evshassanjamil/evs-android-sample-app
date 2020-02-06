@@ -46,18 +46,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:scrollbars="vertical"
-        android:maxLines="10" />
+        android:maxLines="10"
+        android:textColor="@color/black" />
 
     <Button
         android:id="@+id/btnClearDb"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/clearDb" />
-
-    <Button
-        android:id="@+id/btnTest"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/test" />
 
 </LinearLayout>

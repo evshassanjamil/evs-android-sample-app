@@ -25,7 +25,7 @@ public class SqliteActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        //AppUtils.showToastShort(SqliteActivity.this, msg);
+                        AppUtils.showToastShort(SqliteActivity.this, msg);
                     }
                 });
             }
@@ -67,7 +67,7 @@ public class SqliteActivity extends AppCompatActivity {
                 String email = etUserEmail.getText().toString();
                 String phone = etUserPhone.getText().toString();
 
-                /*etUserName.setError(!AppUtils.isValidString(name) ? "Incorrect Name" : null);
+                etUserName.setError(!AppUtils.isValidString(name) ? "Incorrect Name" : null);
                 etUserEmail.setError(!AppUtils.isValidEmail(email) ? "Incorrect Email" : null);
                 etUserPhone.setError(!AppUtils.isValidString(phone) ? "Incorrect Phone" : null);
 
@@ -75,12 +75,12 @@ public class SqliteActivity extends AppCompatActivity {
                     return;
 
                 MyDbBackgroundTask dbTask = new MyDbBackgroundTask(SqliteActivity.this, listener);
-                dbTask.execute(DatabaseHandler.Commands.ADD.name(), name, email, phone);*/
+                dbTask.execute(DatabaseHandler.Commands.ADD.name(), name, email, phone);
 
-                for (int i = 0; i < 1000; i++) {
+                /*for (int i = 0; i < 1000; i++) {
                     MyDbBackgroundTask dbTask = new MyDbBackgroundTask(SqliteActivity.this, listener);
                     dbTask.execute(DatabaseHandler.Commands.ADD.name(), name, email, phone);
-                }
+                }*/
             }
         });
 
@@ -100,13 +100,6 @@ public class SqliteActivity extends AppCompatActivity {
 
                 MyDbBackgroundTask task = new MyDbBackgroundTask(SqliteActivity.this, listener);
                 task.execute(DatabaseHandler.Commands.CLEAR_DB.name());
-            }
-        });
-
-        findViewById(R.id.btnTest).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                AppUtils.showToastShort(SqliteActivity.this, "Hello!");
             }
         });
     }

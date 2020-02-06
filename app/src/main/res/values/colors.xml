@@ -11,4 +11,5 @@
     <color name="icon_color_dark">@color/colorPrimaryDark</color>
     <color name="icon_color_pass">@color/green</color>
     <color name="icon_color_alert">@color/red</color>
+    <color name="black">#000000</color>
 </resources>
