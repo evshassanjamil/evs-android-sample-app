@@ -117,7 +117,6 @@ public class ImageFragment extends Fragment {
                     .centerInside()
                     .resize(500, 500)
                     .error(R.drawable.ic_broken_image)
-                    .placeholder(R.drawable.ic_filter_hdr)
                     .into(zoomageView, new Callback() {
                         @Override
                         public void onSuccess() {
