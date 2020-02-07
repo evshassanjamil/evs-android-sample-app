@@ -29,7 +29,7 @@ public class MyDbBackgroundTask extends AsyncTask<String, Void, String> {
         } else if (params[0].equalsIgnoreCase(DatabaseHandler.Commands.GET.name())) {
             return dbHandler.get("SELECT * FROM " + DatabaseHandler.TABLE_USERS);
         } else if (params[0].equalsIgnoreCase(DatabaseHandler.Commands.CLEAR_DB.name())) {
-            dbHandler.clearDatabase(new String[]{DatabaseHandler.TABLE_USERS});
+            dbHandler.clear(new String[]{DatabaseHandler.TABLE_USERS});
         }
         return null;
     }

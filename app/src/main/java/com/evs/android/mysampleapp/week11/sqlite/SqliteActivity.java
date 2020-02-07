@@ -26,6 +26,11 @@ public class SqliteActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         AppUtils.showToastShort(SqliteActivity.this, msg);
+
+                        TextView tvUsers = findViewById(R.id.tvUsers);
+                        String message = "Inserted Record Id: " + id;
+                        tvUsers.scrollTo(0, 0);
+                        tvUsers.setText(message);
                     }
                 });
             }
@@ -51,6 +56,7 @@ public class SqliteActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         TextView tvUsers = findViewById(R.id.tvUsers);
+                        tvUsers.scrollTo(0, 0);
                         tvUsers.setText(msg);
                     }
                 });

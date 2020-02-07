@@ -135,7 +135,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return flag;
     }
 
-    public void clearDatabase(String[] tables) {
+    public void clear(String[] tables) {
         // NOTE: DROP CHILD TABLES FIRST and THEN PARENT TABLES.
         SQLiteDatabase db = getWritableDatabase();
         // Dropping Tables
