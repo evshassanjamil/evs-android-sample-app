@@ -17,6 +17,8 @@ import java.util.ArrayList;
 
 public class ViewPagerActivity extends AppCompatActivity {
 
+    ArrayList<SliderItem> listItems;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +36,7 @@ public class ViewPagerActivity extends AppCompatActivity {
             }
         });
 
-        ArrayList<SliderItem> listItems = new ArrayList<>();
+        listItems = new ArrayList<>();
         listItems.add(new SliderItem("Coca Cola", "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0016/9323/brand.gif"));
         listItems.add(new SliderItem("Sprite", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRN5LGU9oDDvPirToSmpJd_Eb8Ny7J5-M1yuMe4rOqORF0sWYoF&s"));
         listItems.add(new SliderItem("Milk Pak", "https://www.brandsaward.com/application/assets/images/boya-winners/milkpak-logo.jpg"));
@@ -72,7 +74,26 @@ public class ViewPagerActivity extends AppCompatActivity {
         mAdapter = new MyFragmentStatePagerAdapter(getSupportFragmentManager(), items);
         viewPager.setAdapter(mAdapter);
         viewPager.setCurrentItem(position, true);
+
+        //startSlideShow(2000);
     }
+
+
+    /*int currentItemIndex = 0;
+    public void startSlideShow(int durationMS) {
+        new Handler().post(new Runnable() {
+            @Override
+            public void run() {
+                if(currentItemIndex < listItems.size()) {
+                    viewPager.setCurrentItem(currentItemIndex++);
+                    new Handler().postDelayed(this, durationMS);
+                } else {
+                    currentItemIndex = 0;
+                    new Handler().post(this);
+                }
+            }
+        });
+    }*/
 
     private void updateUI(SliderItem item) {
         TextView tvCaption = findViewById(R.id.tvCaption);
