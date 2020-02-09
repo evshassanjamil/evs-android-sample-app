@@ -164,11 +164,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
      */
 
     public interface OnDbTransactionListener {
-        public void onRecordInserted(long id, String msg);
+        void onRecordInserted(long id, String msg);
 
-        public void onRecordFetched(String msg);
+        void onRecordFetched(String msg);
 
-        public void onDbCleared(String msg);
+        void onDbCleared(String msg);
     }
 
     private OnDbTransactionListener mListener;

@@ -77,7 +77,7 @@ public class SqliteActivity extends AppCompatActivity {
                 etUserEmail.setError(!AppUtils.isValidEmail(email) ? "Incorrect Email" : null);
                 etUserPhone.setError(!AppUtils.isValidString(phone) ? "Incorrect Phone" : null);
 
-                if(!AppUtils.isValidString(name) || !AppUtils.isValidString(email) || !AppUtils.isValidString(phone))
+                if (!AppUtils.isValidString(name) || !AppUtils.isValidEmail(email) || !AppUtils.isValidString(phone))
                     return;
 
                 MyDbBackgroundTask dbTask = new MyDbBackgroundTask(SqliteActivity.this, listener);
