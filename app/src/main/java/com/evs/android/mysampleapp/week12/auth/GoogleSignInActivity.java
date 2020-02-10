@@ -21,27 +21,27 @@ import com.squareup.picasso.Picasso;
 
 public class GoogleSignInActivity extends AppCompatActivity {
 
-    GoogleSignInUtils gsu;
+    GoogleSignInHelper gsh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_google_sign_in);
 
-        gsu = new GoogleSignInUtils(this);
-        gsu.onCreate(findViewById(R.id.btnGoogleSignIn));
+        gsh = new GoogleSignInHelper(this);
+        gsh.onCreate(findViewById(R.id.btnGoogleSignIn));
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        gsu.onStart();
+        gsh.onStart();
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        GoogleSignInAccount account = gsu.onActivityResult(requestCode, resultCode, data);
+        GoogleSignInAccount account = gsh.onActivityResult(requestCode, resultCode, data);
         updateUI(account);
     }
 
@@ -60,7 +60,7 @@ public class GoogleSignInActivity extends AppCompatActivity {
         findViewById(R.id.btnSignOut).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                gsu.signout(new OnCompleteListener<Void>() {
+                gsh.signout(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         findViewById(R.id.btnGoogleSignIn).setVisibility(View.VISIBLE);

@@ -15,14 +15,14 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 
-public class GoogleSignInUtils {
+public class GoogleSignInHelper {
 
     private Context mContext;
     private GoogleSignInClient mGoogleSignInClient;
     private final int RC_SIGN_IN = 1221;
-    private static final String TAG = GoogleSignInUtils.class.getSimpleName();
+    private static final String TAG = GoogleSignInHelper.class.getSimpleName();
 
-    GoogleSignInUtils(Context context) {
+    GoogleSignInHelper(Context context) {
         this.mContext = context;
     }
 
