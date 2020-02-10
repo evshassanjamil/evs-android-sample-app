@@ -13,4 +13,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/auth" />
+
+    <Button
+        android:id="@+id/btnMedia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/mediaPlayer" />
+
+    <Button
+        android:id="@+id/btnNetwork"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/network" />
+
+    <Button
+        android:id="@+id/btnImagePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/image_pick_via_camera" />
 </LinearLayout>

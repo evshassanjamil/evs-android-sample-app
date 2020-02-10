@@ -70,4 +70,10 @@
     <string name="google_signin">Google SignIn</string>
     <string name="auth">Authentication (Google Sign-in)</string>
     <string name="signout">Signout</string>
+    <string name="mediaPlayer">Media Player</string>
+    <string name="network">Network</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="image_pick">Image Pick</string>
+    <string name="image_pick_via_camera">Pick Image via Camera/Gallery</string>
 </resources>

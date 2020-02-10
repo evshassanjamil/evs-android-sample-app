@@ -18,6 +18,8 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven { url 'https://jitpack.io' }
+        maven { url "http://api.tplmaps.com:8081/artifactory/example-repo-local" }
     }
 }
 

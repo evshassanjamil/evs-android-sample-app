@@ -8,6 +8,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.evs.android.mysampleapp.R;
 import com.evs.android.mysampleapp.week12.auth.GoogleSignInActivity;
+import com.evs.android.mysampleapp.week12.cameraGallery.ImagePickActivity;
+import com.evs.android.mysampleapp.week12.media.VideoActivity;
+import com.evs.android.mysampleapp.week12.network.NetworkActivity;
 
 public class Week12Activity extends AppCompatActivity {
 
@@ -20,6 +23,27 @@ public class Week12Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Week12Activity.this, GoogleSignInActivity.class));
+            }
+        });
+
+        findViewById(R.id.btnMedia).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Week12Activity.this, VideoActivity.class));
+            }
+        });
+
+        findViewById(R.id.btnNetwork).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Week12Activity.this, NetworkActivity.class));
+            }
+        });
+
+        findViewById(R.id.btnImagePicker).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Week12Activity.this, ImagePickActivity.class));
             }
         });
     }

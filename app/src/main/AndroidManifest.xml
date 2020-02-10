@@ -133,7 +133,21 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".week12.auth.GoogleSignInActivity"
+            android:configChanges="orientation|keyboardHidden"
             android:label="@string/auth"
+            android:parentActivityName=".week12.Week12Activity" />
+        <activity
+            android:name=".week12.media.VideoActivity"
+            android:configChanges="orientation|keyboard|keyboardHidden|screenSize"
+            android:label="@string/mediaPlayer"
+            android:parentActivityName=".week12.Week12Activity" />
+        <activity
+            android:name=".week12.network.NetworkActivity"
+            android:label="@string/network"
+            android:parentActivityName=".week12.Week12Activity" />
+        <activity
+            android:name=".week12.cameraGallery.ImagePickActivity"
+            android:label="@string/image_pick_via_camera"
             android:parentActivityName=".week12.Week12Activity" />
     </application>
 
