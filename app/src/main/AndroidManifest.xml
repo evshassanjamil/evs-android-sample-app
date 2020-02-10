@@ -126,6 +126,15 @@
             android:label="@string/sqlite"
             android:parentActivityName=".week11.Week11Activity" />
 
+        <!-- WEEK 12 -->
+        <activity
+            android:name=".week12.Week12Activity"
+            android:label="@string/week12"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".week12.auth.GoogleSignInActivity"
+            android:label="@string/auth"
+            android:parentActivityName=".week12.Week12Activity" />
     </application>
 
 </manifest>

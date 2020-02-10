@@ -61,10 +61,13 @@
     <string name="viewpager">ViewPager</string>
     <string name="sqlite">Sqlite</string>
     <string name="week11">Week 11</string>
-    <string name="lorem_ipsum">dksfhsdfsdkjf sdfjh sdfkjsd fjsad fkjsd fksdh fkjsd fsadj fsdjk fksad fkdsjf sd fksd jfadsj fjksd</string>
     <string name="phone">Phone</string>
     <string name="add">Add</string>
     <string name="get">Get</string>
     <string name="clearDb">Clear Db</string>
     <string name="test">Test</string>
+    <string name="week12">Week 12</string>
+    <string name="google_signin">Google SignIn</string>
+    <string name="auth">Authentication (Google Sign-in)</string>
+    <string name="signout">Signout</string>
 </resources>
