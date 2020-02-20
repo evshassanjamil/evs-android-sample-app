@@ -31,4 +31,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/image_pick_via_camera" />
+
+    <Button
+        android:id="@+id/btnRestApi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rest_api" />
 </LinearLayout>

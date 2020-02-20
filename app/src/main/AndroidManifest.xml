@@ -149,6 +149,10 @@
             android:name=".week12.cameraGallery.ImagePickActivity"
             android:label="@string/image_pick_via_camera"
             android:parentActivityName=".week12.Week12Activity" />
+        <activity
+            android:name=".week12.restapi.RestApiActivity"
+            android:label="@string/rest_api"
+            android:parentActivityName=".week12.Week12Activity" />
     </application>
 
 </manifest>

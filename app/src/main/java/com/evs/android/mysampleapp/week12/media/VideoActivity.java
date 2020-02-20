@@ -37,11 +37,5 @@ public class VideoActivity extends AppCompatActivity {
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
-
-        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
-            setTheme(R.style.AppThemeNoActionBar);
-        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
-            setTheme(R.style.AppTheme);
-        }
     }
 }

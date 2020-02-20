@@ -76,4 +76,6 @@
     <string name="disconnected">Disconnected</string>
     <string name="image_pick">Image Pick</string>
     <string name="image_pick_via_camera">Pick Image via Camera/Gallery</string>
+    <string name="request">Request</string>
+    <string name="rest_api">Rest API</string>
 </resources>

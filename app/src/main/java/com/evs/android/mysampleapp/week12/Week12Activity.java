@@ -11,6 +11,7 @@ import com.evs.android.mysampleapp.week12.auth.GoogleSignInActivity;
 import com.evs.android.mysampleapp.week12.cameraGallery.ImagePickActivity;
 import com.evs.android.mysampleapp.week12.media.VideoActivity;
 import com.evs.android.mysampleapp.week12.network.NetworkActivity;
+import com.evs.android.mysampleapp.week12.restapi.RestApiActivity;
 
 public class Week12Activity extends AppCompatActivity {
 
@@ -44,6 +45,13 @@ public class Week12Activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(Week12Activity.this, ImagePickActivity.class));
+            }
+        });
+
+        findViewById(R.id.btnRestApi).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Week12Activity.this, RestApiActivity.class));
             }
         });
     }
