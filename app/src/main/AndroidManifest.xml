@@ -7,6 +7,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -153,6 +154,20 @@
             android:name=".week12.restapi.RestApiActivity"
             android:label="@string/rest_api"
             android:parentActivityName=".week12.Week12Activity" />
+
+        <!-- WEEK 13 -->
+        <activity
+            android:name=".week13.Week13Activity"
+            android:label="@string/week13"
+            android:parentActivityName=".MainActivity" />
+        <!--<activity
+            android:name=".week13.location.ActivityLocationApi"
+            android:label="@string/location_api"
+            android:parentActivityName=".week13.Week13Activity" />-->
+        <activity
+            android:name=".week13.notification.ActivityNotification"
+            android:label="@string/notification"
+            android:parentActivityName=".week13.Week13Activity" />
     </application>
 
 </manifest>

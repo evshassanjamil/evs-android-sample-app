@@ -74,7 +74,7 @@ public class PermissionActivity extends AppCompatActivity {
                         // disable features of your app or open another dialog explaining again the permission and directing to
                         // the app setting
                         dialogReasonPermissionSettings(
-                                getString(R.string.reason_storage_permission),
+                                getString(R.string.permission_rationale),
                                 new String[]{getString(R.string.go_to_settings),
                                         getString(R.string.dismiss)});
                     } else if (PERMISSION_STORAGE.equals(permissions[0])) {
@@ -108,7 +108,7 @@ public class PermissionActivity extends AppCompatActivity {
 
     private void dialogReasonPermission() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(getString(R.string.reason_storage_permission));
+        builder.setMessage(getString(R.string.permission_rationale));
         builder.setCancelable(false);
         builder.setPositiveButton(getString(R.string.str_retry),
                 (dialog, id) -> permissionHelper.requestPermission(

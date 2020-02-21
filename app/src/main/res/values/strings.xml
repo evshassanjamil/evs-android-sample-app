@@ -38,8 +38,8 @@
     <string name="no">No</string>
     <string name="ask_permission">Ask Permission</string>
 
-    <string name="reason_storage_permission">Please allow the app to access storage. Denying it will
-        cause no longer function as intended. You can allow permission by
+    <string name="permission_rationale">Please allow permission to the app. Denying, will
+        cause application to no longer function as intended. You can allow permission by
         Go To Settings > Permissions > Enable Permission Switch</string>
     <string name="go_to_settings">Go to Settings</string>
     <string name="str_retry">Retry</string>
@@ -78,4 +78,17 @@
     <string name="image_pick_via_camera">Pick Image via Camera/Gallery</string>
     <string name="request">Request</string>
     <string name="rest_api">Rest API</string>
+    <string name="location_api">Location API</string>
+    <string name="get_location">Get Location</string>
+    <string name="ok">OK</string>
+    <string name="settings">Settings</string>
+    <string name="week13">Week 13</string>
+    <string name="default_channel" translatable="false">GeneralChannel</string>
+    <string name="google_maps_key">AIzaSyALX0gEyg9_-B1xkxBSkb5l4svjEP3CfUQ</string>
+    <string name="title">Title</string>
+    <string name="short_content">Short Content</string>
+    <string name="long_content">Long Content</string>
+    <string name="generate">Generate</string>
+    <string name="id">ID</string>
+    <string name="notification">Notification</string>
 </resources>
