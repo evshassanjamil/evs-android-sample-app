@@ -31,9 +31,11 @@ class NotificationHelper {
         int id = Integer.valueOf(Objects.requireNonNull(map.get(Constants.NOTIFICATION_ID)));
 
         nManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        if (nManager == null)
+            return;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            if (nManager == null)
-                return;
+            // IF ANDROID OS Version is greater and equals than O then we need to create notification channel
+            // before generating notification through NotificationManager/NotificationService.
             NotificationChannel mChannel = nManager.getNotificationChannel(
                     context.getString(R.string.default_channel));
 
