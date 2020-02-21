@@ -8,21 +8,17 @@
     android:padding="10dp"
     android:gravity="center">
 
-    <Button
-        android:id="@+id/btnLocationAPI"
+    <EditText
+        android:id="@+id/etDatabaseMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/location_api" />
-    <Button
-        android:id="@+id/btnNotification"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/notification" />
+        android:hint="@string/message"
+        android:inputType="text"
+        android:maxLines="3" />
 
     <Button
-        android:id="@+id/btnRealtimeDB"
+        android:id="@+id/btnSaveMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/realtime_database" />
-
+        android:text="@string/save" />
 </LinearLayout>

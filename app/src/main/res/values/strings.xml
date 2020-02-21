@@ -91,4 +91,10 @@
     <string name="generate">Generate</string>
     <string name="id">ID</string>
     <string name="notification">Notification</string>
+    <string name="no_location_detected">No location detected</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="permission_denied_explanation">Permission denied, permission is mandatory for application\'s functionality</string>
+    <string name="save">Save</string>
+    <string name="realtime_database">Realtime Database</string>
 </resources>

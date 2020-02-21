@@ -5,9 +5,15 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!--
+    Android has two location request settings: {@code ACCESS_COARSE_LOCATION} and
+    {@code ACCESS_FINE_LOCATION}. These settings control the accuracy of the current location. This
+    sample uses ACCESS_COARSE_LOCATION. As a result, the location services return a location with
+    an accuracy approximately equivalent to a city block.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
-        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -160,13 +166,17 @@
             android:name=".week13.Week13Activity"
             android:label="@string/week13"
             android:parentActivityName=".MainActivity" />
-        <!--<activity
+        <activity
             android:name=".week13.location.ActivityLocationApi"
             android:label="@string/location_api"
-            android:parentActivityName=".week13.Week13Activity" />-->
+            android:parentActivityName=".week13.Week13Activity" />
         <activity
             android:name=".week13.notification.ActivityNotification"
             android:label="@string/notification"
+            android:parentActivityName=".week13.Week13Activity" />
+        <activity
+            android:name=".week13.realtimeDatabase.ActivityRealtimeDatabase"
+            android:label="@string/realtime_database"
             android:parentActivityName=".week13.Week13Activity" />
     </application>
 

@@ -129,14 +129,5 @@ public class FragmentNavigator implements FragmentManager.OnBackStackChangedList
 
     @Override
     public void onBackStackChanged() {
-        /*if (getFragmentManager().getBackStackEntryCount() == 0) {
-            // Roll backing TTS Voice state when only BaseFragmentMap is remaining in back stack
-            //MyApplication.getInstance().getAppPreferences().setNavigationTBTVoiceMute(userPrefMuteState);
-
-            // Changing location request priority to handle the flow:
-            // If user opened navigation screen priority changed to HIGH if he didn't do anything and
-            // Navigates back to the previous screen then priority should be changed back to the BALANCED
-            //changeLocationRequestPriorityBackIfUserDoNothing();
-        }*/
     }
 }
