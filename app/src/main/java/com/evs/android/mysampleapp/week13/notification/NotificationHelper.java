@@ -68,6 +68,8 @@ class NotificationHelper {
         builder.setContentTitle(map.get(Constants.NOTIFICATION_NAME))                            // required
                 .setSmallIcon(resSmallIcon)   // required
                 .setContentText(map.get(Constants.NOTIFICATION_SHORT_TEXT)) // required
+                .setStyle(new NotificationCompat.BigTextStyle()
+                        .bigText(map.get(Constants.NOTIFICATION_LONG_TEXT)))
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setAutoCancel(true)
                 .setContentIntent(pendingIntentNotifOpen)
@@ -75,9 +77,7 @@ class NotificationHelper {
                 .setTicker(map.get(Constants.NOTIFICATION_NAME))
                 .setVibrate(new long[]{100, 200, 300, 400, 500, 400, 300, 200, 400});
 
-        if (nManager != null) {
-            nManager.notify(id, builder.build());
-        }
+        nManager.notify(id, builder.build());
     }
 
 }

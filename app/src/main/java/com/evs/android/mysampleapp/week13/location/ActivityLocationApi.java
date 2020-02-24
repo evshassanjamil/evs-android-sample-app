@@ -39,8 +39,6 @@ public class ActivityLocationApi extends AppCompatActivity {
      */
     protected Location mLastLocation;
 
-    private String mLatitudeLabel;
-    private String mLongitudeLabel;
     private TextView mTvLocation;
 
 
@@ -49,8 +47,6 @@ public class ActivityLocationApi extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_api);
 
-        mLatitudeLabel = getResources().getString(R.string.latitude);
-        mLongitudeLabel = getResources().getString(R.string.longitude);
         mTvLocation = findViewById((R.id.tvLocation));
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this);
@@ -93,8 +89,10 @@ public class ActivityLocationApi extends AppCompatActivity {
                         if (task.isSuccessful() && task.getResult() != null) {
                             mLastLocation = task.getResult();
 
-                            String strLocation = mLatitudeLabel + ": " + mLastLocation.getLatitude()
-                                    + "\n" + mLongitudeLabel + ": " + mLastLocation.getLongitude();
+                            String strLocation = getResources().getString(R.string.latitude)
+                                    + ": " + mLastLocation.getLatitude()
+                                    + "\n" + getResources().getString(R.string.longitude)
+                                    + ": " + mLastLocation.getLongitude();
                             mTvLocation.setText(strLocation);
 
                             mTvLocation.setOnClickListener(new View.OnClickListener() {
@@ -144,20 +142,20 @@ public class ActivityLocationApi extends AppCompatActivity {
      */
     private boolean checkPermissions() {
         int permissionState = ActivityCompat.checkSelfPermission(this,
-                Manifest.permission.ACCESS_COARSE_LOCATION);
+                Manifest.permission.ACCESS_FINE_LOCATION);
         return permissionState == PackageManager.PERMISSION_GRANTED;
     }
 
     private void startLocationPermissionRequest() {
         ActivityCompat.requestPermissions(ActivityLocationApi.this,
-                new String[]{Manifest.permission.ACCESS_COARSE_LOCATION},
+                new String[]{Manifest.permission.ACCESS_FINE_LOCATION},
                 REQUEST_PERMISSIONS_REQUEST_CODE);
     }
 
     private void requestPermissions() {
         boolean shouldProvideRationale =
                 ActivityCompat.shouldShowRequestPermissionRationale(this,
-                        Manifest.permission.ACCESS_COARSE_LOCATION);
+                        Manifest.permission.ACCESS_FINE_LOCATION);
 
         // Provide an additional rationale to the user. This would happen if the user denied the
         // request previously, but didn't check the "Don't ask again" checkbox.
