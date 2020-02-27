@@ -19,6 +19,6 @@
         android:id="@+id/ivResult"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        app:srcCompat="@drawable/ic_cancel"
+        app:srcCompat="@drawable/ic_cancel2"
         android:visibility="gone" />
 </LinearLayout>

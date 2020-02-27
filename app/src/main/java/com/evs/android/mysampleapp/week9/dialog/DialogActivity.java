@@ -41,7 +41,7 @@ public class DialogActivity extends AppCompatActivity {
                 builder.setNegativeButton(getString(R.string.no), new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int i) {
-                        ((ImageView) findViewById(R.id.ivResult)).setImageResource(R.drawable.ic_cancel);
+                        ((ImageView) findViewById(R.id.ivResult)).setImageResource(R.drawable.ic_cancel2);
                         findViewById(R.id.btnAskQuestion).setVisibility(View.GONE);
                         findViewById(R.id.ivResult).setVisibility(View.VISIBLE);
                     }

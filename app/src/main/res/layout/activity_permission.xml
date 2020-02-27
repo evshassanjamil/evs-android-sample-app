@@ -18,7 +18,7 @@
         android:id="@+id/ivFlag"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_cancel"
+        app:srcCompat="@drawable/ic_cancel2"
         android:layout_below="@+id/btnAskPermission"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/flag" />

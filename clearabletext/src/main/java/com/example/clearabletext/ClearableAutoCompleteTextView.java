@@ -1,4 +1,4 @@
-package com.evs.android.mysampleapp.week7.customview;
+package com.example.clearabletext;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -7,9 +7,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import androidx.annotation.DrawableRes;
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
-
-import com.evs.android.mysampleapp.R;
 
 /**
  * sub class of {@link android.widget.AutoCompleteTextView} that includes a clear (dismiss / close) button with
@@ -105,6 +104,10 @@ public class ClearableAutoCompleteTextView extends AppCompatAutoCompleteTextView
         this.drawableClear = drawable;
     }
 
+    public void setSrcClear(@DrawableRes int resId) {
+        this.drawableClear = getResources().getDrawable(resId);
+    }
+
     public void setOnClearListener(final OnClearListener clearListener) {
         this.onClearListener = clearListener;
     }
@@ -118,14 +121,14 @@ public class ClearableAutoCompleteTextView extends AppCompatAutoCompleteTextView
     }
 
     private void initAttrs(Context context, AttributeSet attrs) {
-        TypedArray a = context.getTheme().obtainStyledAttributes(attrs,
+        TypedArray array = context.getTheme().obtainStyledAttributes(attrs,
                 R.styleable.ClearableAutoCompleteTextView, 0, 0);
         try {
-            Drawable drawable = a.getDrawable(R.styleable.ClearableAutoCompleteTextView_srcClear);
+            Drawable drawable = array.getDrawable(R.styleable.ClearableAutoCompleteTextView_srcClear);
             if(drawable != null)
                 setSrcClear(drawable);
         } finally {
-            a.recycle();
+            array.recycle();
         }
     }
 }

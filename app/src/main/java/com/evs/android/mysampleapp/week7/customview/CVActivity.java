@@ -6,6 +6,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.evs.android.mysampleapp.R;
+import com.example.clearabletext.ClearableAutoCompleteTextView;
 
 /**
  * Created by hassanjamil on 01/29/2020.

@@ -179,6 +179,12 @@
             android:name=".week13.realtimeDatabase.ActivityRealtimeDatabase"
             android:label="@string/realtime_database"
             android:parentActivityName=".week13.Week13Activity" />
+
+        <!-- WEEK 14 -->
+        <activity
+            android:name=".week14.Week14Activity"
+            android:label="@string/week14"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

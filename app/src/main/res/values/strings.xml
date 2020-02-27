@@ -97,4 +97,5 @@
     <string name="permission_denied_explanation">Permission denied, permission is mandatory for application\'s functionality</string>
     <string name="save">Save</string>
     <string name="realtime_database">Realtime Database</string>
+    <string name="week14">Week 14</string>
 </resources>

@@ -11,6 +11,7 @@ import com.evs.android.mysampleapp.week10.Week10Activity;
 import com.evs.android.mysampleapp.week11.Week11Activity;
 import com.evs.android.mysampleapp.week12.Week12Activity;
 import com.evs.android.mysampleapp.week13.Week13Activity;
+import com.evs.android.mysampleapp.week14.Week14Activity;
 import com.evs.android.mysampleapp.week6.Week6Activity;
 import com.evs.android.mysampleapp.week7.Week7Activity;
 import com.evs.android.mysampleapp.week8.Week8Activity;
@@ -84,6 +85,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, Week13Activity.class));
+            }
+        });
+
+        findViewById(R.id.btnWeek14).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Week14Activity.class));
             }
         });
     }

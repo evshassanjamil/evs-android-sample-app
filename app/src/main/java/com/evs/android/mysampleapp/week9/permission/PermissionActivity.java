@@ -52,7 +52,7 @@ public class PermissionActivity extends AppCompatActivity {
                 .setImageResource(
                         (permissionHelper.isPermissionGranted(PERMISSION_STORAGE))
                                 ? R.drawable.ic_check_circle
-                                : R.drawable.ic_cancel);
+                                : R.drawable.ic_cancel2);
     }
 
     @Override
