@@ -17,6 +17,7 @@ public class Week14Activity extends AppCompatActivity {
         setContentView(R.layout.activity_week14);
 
         ClearableAutoCompleteTextView catvInput = findViewById(R.id.catvInput);
+        catvInput.setSrcClear(this, R.drawable.ic_cancel);
         catvInput.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {

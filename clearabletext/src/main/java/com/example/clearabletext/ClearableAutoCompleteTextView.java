@@ -8,7 +8,9 @@ import android.view.MotionEvent;
 import android.view.View;
 
 import androidx.annotation.DrawableRes;
+import androidx.annotation.NonNull;
 import androidx.appcompat.widget.AppCompatAutoCompleteTextView;
+import androidx.core.content.ContextCompat;
 
 /**
  * sub class of {@link android.widget.AutoCompleteTextView} that includes a clear (dismiss / close) button with
@@ -36,8 +38,7 @@ public class ClearableAutoCompleteTextView extends AppCompatAutoCompleteTextView
     private OnClearListener onClearListener = defaultClearListener;
 
     // The image we defined for the clear button
-    private Drawable drawableClear = getResources().getDrawable(
-            R.drawable.ic_cancel);
+    private Drawable drawableClear;
 
     public interface OnClearListener {
         void onClear();
@@ -46,26 +47,26 @@ public class ClearableAutoCompleteTextView extends AppCompatAutoCompleteTextView
     /* Required methods, not used in this implementation */
     public ClearableAutoCompleteTextView(Context context) {
         super(context);
-        init(context, null, 0);
+        init(context, null);
     }
 
     /* Required methods, not used in this implementation */
     public ClearableAutoCompleteTextView(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        init(context, attrs, defStyle);
+        init(context, attrs);
     }
 
     /* Required methods, not used in this implementation */
     public ClearableAutoCompleteTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context, attrs, 0);
+        init(context, attrs);
     }
 
-    private void init(Context context, AttributeSet attrs, int defStyle) {
-        //this.setInputType(InputType.TYPE_TEXT_FLAG_NO_SUGGESTIONS);
-        // Set the bounds of the button
-        /*this.setCompoundDrawablesWithIntrinsicBounds(null, null,
-                drawableClear, null);*/
+    private void init(Context context, AttributeSet attrs) {
+
+        drawableClear = ContextCompat.getDrawable(context,
+                com.example.clearabletext.R.drawable.ic_cancel);
+
         if(attrs != null)
             initAttrs(context, attrs);
 
@@ -100,12 +101,12 @@ public class ClearableAutoCompleteTextView extends AppCompatAutoCompleteTextView
             hideClearButton();
     }
 
-    public void setSrcClear(Drawable drawable) {
+    public void setSrcClear(@NonNull Drawable drawable) {
         this.drawableClear = drawable;
     }
 
-    public void setSrcClear(@DrawableRes int resId) {
-        this.drawableClear = getResources().getDrawable(resId);
+    public void setSrcClear(Context context, @DrawableRes int resId) {
+        this.drawableClear = ContextCompat.getDrawable(context, resId);
     }
 
     public void setOnClearListener(final OnClearListener clearListener) {
