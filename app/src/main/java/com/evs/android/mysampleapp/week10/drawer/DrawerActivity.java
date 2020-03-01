@@ -27,6 +27,7 @@ public class DrawerActivity extends AppCompatActivity {
     private DrawerManager mDrawerManager;
     private ToolbarManager mTbManager;
     private FragmentNavigator mFragmentNavigator;
+    private MenuItem menuItemChecked;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +84,8 @@ public class DrawerActivity extends AppCompatActivity {
             }
         });
 
+
+        menuItemChecked = mDrawerManager.getMenuItem(R.id.mi_drawer_item_home).setChecked(true);
         onHomeMenuClick();
     }
 
@@ -98,20 +101,27 @@ public class DrawerActivity extends AppCompatActivity {
     }
 
     private void selectDrawerItem(MenuItem item) {
+        if (menuItemChecked != null) {
+            menuItemChecked.setChecked(false);
+        }
+
         switch (item.getItemId()) {
 
             case R.id.mi_drawer_item_home:
                 //AppUtils.showToastShort(DrawerActivity.this, "Home Menu Clicked");
                 closeDrawerIfOpen();
+                menuItemChecked = mDrawerManager.getMenuItem(R.id.mi_drawer_item_home).setChecked(true);
                 onHomeMenuClick();
                 break;
             case R.id.mi_drawer_item_sign_in:
                 //AppUtils.showToastShort(DrawerActivity.this, "Sign In Menu Clicked");
                 closeDrawerIfOpen();
+                menuItemChecked = mDrawerManager.getMenuItem(R.id.mi_drawer_item_sign_in).setChecked(true);
                 onLoginMenuClick();
                 break;
             case R.id.mi_drawer_item_logout:
                 //AppPreferences.getInstance(DrawerActivity.this).logoutUser();
+                menuItemChecked = item.setChecked(true);
                 AppUtils.showToastShort(DrawerActivity.this, "Logout Menu Clicked");
                 break;
         }

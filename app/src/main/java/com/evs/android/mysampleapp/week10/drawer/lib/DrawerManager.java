@@ -2,6 +2,7 @@ package com.evs.android.mysampleapp.week10.drawer.lib;
 
 import android.app.Activity;
 import android.content.Context;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -143,6 +144,13 @@ public class DrawerManager {
     public void setDrawerMenuVisible(@IdRes int itemResId, boolean visible) {
         if (mNavigationView != null && mNavigationView.getMenu() != null)
             mNavigationView.getMenu().findItem(itemResId).setVisible(visible);
+    }
+
+    public MenuItem getMenuItem(@IdRes int resId) {
+        if (mNavigationView != null && mNavigationView.getMenu() != null)
+            return mNavigationView.getMenu().findItem(resId);
+        else
+            return null;
     }
 
     public void onBackPressed() {
