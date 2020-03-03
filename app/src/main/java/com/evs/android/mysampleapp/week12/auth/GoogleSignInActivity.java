@@ -72,7 +72,7 @@ public class GoogleSignInActivity extends AppCompatActivity {
 
         // Loading User Image
         ImageView ivUser = findViewById(R.id.ivUser);
-        Picasso.get()
+        Picasso.with(this)
                 .load(account.getPhotoUrl())
                 .centerInside()
                 .resize(500, 500)
@@ -85,8 +85,8 @@ public class GoogleSignInActivity extends AppCompatActivity {
                     }
 
                     @Override
-                    public void onError(Exception e) {
-                        e.printStackTrace();
+                    public void onError() {
+
                     }
                 });
     }

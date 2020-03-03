@@ -1,8 +1,8 @@
 package com.evs.android.mysampleapp.week11.viewpager;
 
 
-import android.content.res.ColorStateList;
 import android.graphics.Bitmap;
+import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -16,6 +16,7 @@ import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
+import androidx.core.graphics.drawable.DrawableCompat;
 import androidx.fragment.app.Fragment;
 import androidx.palette.graphics.Palette;
 
@@ -72,7 +73,17 @@ public class ImageFragment extends Fragment {
 
         // INITIATING PROGRESS BAR AND SETTING COLOR
         ProgressBar pbLoading = view.findViewById(R.id.pb_image);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
+            Drawable drawableProgress = DrawableCompat.wrap(pbLoading.getIndeterminateDrawable());
+            DrawableCompat.setTint(drawableProgress, ContextCompat.getColor(getContext(), R.color.colorPrimary));
+            pbLoading.setIndeterminateDrawable(DrawableCompat.unwrap(drawableProgress));
+        } else {
+            pbLoading.getIndeterminateDrawable().setColorFilter(
+                    ContextCompat.getColor(getContext(), R.color.colorPrimary), PorterDuff.Mode.SRC_IN);
+        }
+
+        /*if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             int color = ContextCompat.getColor(getContext(), R.color.colorPrimary);
             pbLoading.setIndeterminateTintList(ColorStateList.valueOf(color));
         } else {
@@ -82,7 +93,7 @@ public class ImageFragment extends Fragment {
             pbLoading.setIndeterminateDrawable(progressDrawable);
             pbLoading.getIndeterminateDrawable().setColorFilter(color,
                     android.graphics.PorterDuff.Mode.SRC_IN);
-        }
+        }*/
 
         if (getContext() != null && mSliderItem != null
                 && mSliderItem.getImageUrl() != null) {
@@ -112,7 +123,7 @@ public class ImageFragment extends Fragment {
 
         // IMAGE LOADING
         if (AppUtils.isValidWebURL(imageUrl)) {
-            Picasso.get()
+            Picasso.with(getContext())
                     .load(imageUrl)
                     .centerInside()
                     .resize(500, 500)
@@ -131,8 +142,8 @@ public class ImageFragment extends Fragment {
                         }
 
                         @Override
-                        public void onError(Exception e) {
-                            e.printStackTrace();
+                        public void onError() {
+
                         }
                     });
         } else {

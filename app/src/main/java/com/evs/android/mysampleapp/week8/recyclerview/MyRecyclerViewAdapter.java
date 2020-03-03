@@ -1,7 +1,6 @@
 package com.evs.android.mysampleapp.week8.recyclerview;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,13 +9,15 @@ import android.widget.TextView;
 
 import androidx.annotation.LayoutRes;
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.evs.android.mysampleapp.R;
-import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
+
+import jp.wasabeef.picasso.transformations.CropCircleTransformation;
 
 /**
  * Created by hassanjamil on 01/29/2020.
@@ -34,7 +35,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     //private static final int VIEW_TYPE_ITEM2 = 2;
 
     public MyRecyclerViewAdapter(Context context, ArrayList<Item> listData) {
-        mContext = context;
+        this.mContext = context;
         if (listData == null)
             dataList.clear();
         else
@@ -124,28 +125,15 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter<RecyclerView.Vie
     }
 
     private void loadImage(ItemContentViewHolder viewHolder, String url) {
-        final Picasso picasso = Picasso.get();
+        final Picasso picasso = Picasso.with(mContext);
         picasso.setIndicatorsEnabled(false);
         picasso.load(url)
                 .fit()
                 .centerCrop()
-                .placeholder(R.drawable.ic_filter_hdr)
-                .error(R.drawable.ic_broken_image)
-                //.transform(new CropCircleTransformation())
-                .into(viewHolder.ivImage, new Callback() {
-                    @Override
-                    public void onSuccess() {
-
-                    }
-
-                    @Override
-                    public void onError(@NonNull Exception e) {
-                        if (e.getMessage() != null) {
-                            Log.e(MyRecyclerViewAdapter.class.getSimpleName(), e.getMessage());
-                            e.printStackTrace();
-                        }
-                    }
-                });
+                .placeholder(ContextCompat.getDrawable(mContext, R.drawable.ic_filter_hdr))
+                .error(ContextCompat.getDrawable(mContext, R.drawable.ic_broken_image))
+                .transform(new CropCircleTransformation())
+                .into(viewHolder.ivImage);
 
     }
 }
