@@ -84,7 +84,7 @@
     <string name="settings">Settings</string>
     <string name="week13">Week 13</string>
     <string name="default_channel" translatable="false">GeneralChannel</string>
-    <string name="google_maps_key">AIzaSyALX0gEyg9_-B1xkxBSkb5l4svjEP3CfUQ</string>
+    <string name="google_maps_key">AIzaSyB27yspqFzZlJCWyduh3lGFY2COSk7CAjM</string>
     <string name="title">Title</string>
     <string name="short_content">Short Content</string>
     <string name="long_content">Long Content</string>
@@ -98,4 +98,5 @@
     <string name="save">Save</string>
     <string name="realtime_database">Realtime Database</string>
     <string name="week14">Week 14</string>
+    <string name="google_maps">Google Maps</string>
 </resources>

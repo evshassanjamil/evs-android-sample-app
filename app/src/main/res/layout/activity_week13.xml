@@ -18,11 +18,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/notification" />
-
     <Button
         android:id="@+id/btnRealtimeDB"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/realtime_database" />
+
+    <Button
+        android:id="@+id/btnGoogleMaps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/google_maps" />
 
 </LinearLayout>

@@ -180,6 +180,17 @@
             android:name=".week13.realtimeDatabase.ActivityRealtimeDatabase"
             android:label="@string/realtime_database"
             android:parentActivityName=".week13.Week13Activity" />
+        <activity
+            android:name=".week13.maps.GoogleMapsActivity"
+            android:label="@string/google_maps"
+            android:parentActivityName=".week13.Week13Activity" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
 
         <!-- WEEK 14 -->
         <activity

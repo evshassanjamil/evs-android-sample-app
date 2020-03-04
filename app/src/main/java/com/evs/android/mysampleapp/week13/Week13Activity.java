@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.evs.android.mysampleapp.R;
 import com.evs.android.mysampleapp.week13.location.ActivityLocationApi;
+import com.evs.android.mysampleapp.week13.maps.GoogleMapsActivity;
 import com.evs.android.mysampleapp.week13.notification.ActivityNotification;
 import com.evs.android.mysampleapp.week13.realtimeDatabase.ActivityRealtimeDatabase;
 
@@ -39,5 +40,11 @@ public class Week13Activity extends AppCompatActivity {
             }
         });
 
+        findViewById(R.id.btnGoogleMaps).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Week13Activity.this, GoogleMapsActivity.class));
+            }
+        });
     }
 }
