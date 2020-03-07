@@ -197,6 +197,12 @@
             android:name=".week14.Week14Activity"
             android:label="@string/week14"
             android:parentActivityName=".MainActivity" />
+
+        <!-- WEEK 15 -->
+        <activity
+            android:name=".week15.Week15Activity"
+            android:label="@string/week15"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

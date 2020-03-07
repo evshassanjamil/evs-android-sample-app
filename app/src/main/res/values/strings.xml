@@ -99,4 +99,6 @@
     <string name="realtime_database">Realtime Database</string>
     <string name="week14">Week 14</string>
     <string name="google_maps">Google Maps</string>
+    <string name="log_event">Log Event</string>
+    <string name="week15">Week 15</string>
 </resources>

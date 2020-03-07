@@ -1,68 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:padding="10dp">
+    android:padding="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
         <Button
             android:id="@+id/btnWeek6"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/week6"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:text="@string/week6" />
         <Button
             android:id="@+id/btnWeek7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/week7"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:text="@string/week7" />
         <Button
             android:id="@+id/btnWeek8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/week8"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal"
+            android:text="@string/week8" />
         <Button
             android:id="@+id/btnWeek9"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/week9"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:text="@string/week9" />
 
-    <Button
-        android:id="@+id/btnWeek10"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/week10"
-        android:layout_gravity="center_horizontal" />
+        <Button
+            android:id="@+id/btnWeek10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/week10" />
 
-    <Button
-        android:id="@+id/btnWeek11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/week11"
-        android:layout_gravity="center_horizontal" />
+        <Button
+            android:id="@+id/btnWeek11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/week11" />
 
-    <Button
-        android:id="@+id/btnWeek12"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/week12"
-        android:layout_gravity="center_horizontal" />
+        <Button
+            android:id="@+id/btnWeek12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/week12" />
 
-    <Button
-        android:id="@+id/btnWeek13"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/week13"
-        android:layout_gravity="center_horizontal" />
+        <Button
+            android:id="@+id/btnWeek13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/week13" />
 
-    <Button
-        android:id="@+id/btnWeek14"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/week14"
-        android:layout_gravity="center_horizontal" />
-</LinearLayout>
+        <Button
+            android:id="@+id/btnWeek14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/week14" />
+
+        <Button
+            android:id="@+id/btnWeek15"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/week15" />
+    </LinearLayout>
+</ScrollView>
