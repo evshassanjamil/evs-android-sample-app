@@ -38,9 +38,8 @@ public class RestApiActivity extends AppCompatActivity {
                 StrictMode.setThreadPolicy(policy);
 
                 OkHttpClient client = new OkHttpClient();
-
                 Request request = new Request.Builder()
-                        .url("http://10.0.2.2:8080/user/getall")
+                        .url("https://jsonplaceholder.typicode.com/todos/1")
                         .get()
                         .build();
                 client.newCall(request).enqueue(new Callback() {
