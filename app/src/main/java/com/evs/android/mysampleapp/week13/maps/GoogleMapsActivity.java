@@ -28,5 +28,31 @@ public class GoogleMapsActivity extends AppCompatActivity implements OnMapReadyC
         LatLng evs = new LatLng(33.635536, 73.073998);
         googleMap.addMarker(new MarkerOptions().position(evs).title("EVS Training Institute, Rawalpindi Campus"));
         googleMap.animateCamera(CameraUpdateFactory.newLatLngZoom(evs, 18));
+
+        //plotRandom(googleMap, 10);
     }
+
+    /*private void plotRandom(GoogleMap map, int number) {
+        LatLngBounds bounds = map.getProjection().getVisibleRegion().latLngBounds;
+        LatLng southWest = bounds.southwest;
+        LatLng northEast = bounds.northeast;
+        double lngSpan = northEast.longitude - southWest.longitude;
+        double latSpan = northEast.latitude - southWest.latitude;
+        LatLng[] pointsrand = new LatLng[number];
+
+        for (int i = 0; i < number; ++i) {
+            LatLng point = new LatLng(southWest.latitude + latSpan * Math.random(),
+                    southWest.longitude + lngSpan * Math.random());
+            pointsrand[i] = point;
+        }
+
+        for (int i = 0; i < number; ++i) {
+            String markerText = i + " : " + pointsrand[i];
+            map.addMarker(new MarkerOptions()
+                    .position(pointsrand[i])
+                    .title(markerText));
+            //arrMarkers.push(marker);
+        }
+
+    }*/
 }
