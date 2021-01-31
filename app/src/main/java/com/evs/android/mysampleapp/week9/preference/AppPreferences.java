@@ -6,8 +6,6 @@ import android.content.SharedPreferences.Editor;
 
 import androidx.annotation.NonNull;
 
-import com.evs.android.mysampleapp.utils.AppUtils;
-
 /**
  * Created by hassanjamil on 01/29/2020.
  *
@@ -39,43 +37,26 @@ public class AppPreferences {
     }
 
     ///////////////////////////////// USER LOGIN SESSION /////////////////////////////////
-    public void saveLoginSession(@NonNull String username, @NonNull String email, boolean remember) {
-        mEditor.putString(PREF_KEY_USER_NAME, username);
-        mEditor.putString(PREF_KEY_USER_EMAIL, email);
-        mEditor.putBoolean(PREF_KEY_REMEMBER_LOGIN, remember);
+    public void putString(@NonNull String key, String value) {
+        mEditor.putString(key, value);
         mEditor.commit();
     }
 
-    public void rememberLogin(boolean remember) {
-        mEditor.putBoolean(PREF_KEY_REMEMBER_LOGIN, remember);
+    public void putBoolean(@NonNull String key, boolean value) {
+        mEditor.putBoolean(key, value);
         mEditor.commit();
     }
 
-    public boolean isUserLoggedIn() {
-        String email = mPreference.getString(PREF_KEY_USER_EMAIL, null);
-        return AppUtils.isValidString(email);
+    public boolean getBoolean(@NonNull String key, boolean defValue) {
+        return mPreference.getBoolean(key, defValue);
     }
 
-    public boolean isRememberLogin() {
-        return mPreference.getBoolean(PREF_KEY_REMEMBER_LOGIN, false);
-    }
-
-    private String getUserEmail() {
-        return mPreference.getString(PREF_KEY_USER_EMAIL, null);
-    }
-
-    public String getUserName() {
-        return mPreference.getString(PREF_KEY_USER_NAME, "");
-    }
-
-    public void logoutUser() {
-        mEditor.remove(PREF_KEY_USER_NAME);
-        mEditor.remove(PREF_KEY_USER_EMAIL);
-        mEditor.remove(PREF_KEY_REMEMBER_LOGIN);
-        mEditor.commit();
+    public String getString(@NonNull String key, String defValue) {
+        return mPreference.getString(key, defValue);
     }
 
     public void clearAll() {
+        mEditor.remove(PREF_KEY_REMEMBER_LOGIN);
         mEditor.clear();
         mEditor.commit();
     }

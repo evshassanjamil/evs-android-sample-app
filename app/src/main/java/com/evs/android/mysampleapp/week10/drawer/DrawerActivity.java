@@ -2,6 +2,7 @@ package com.evs.android.mysampleapp.week10.drawer;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.View;
 
@@ -15,6 +16,7 @@ import com.evs.android.mysampleapp.week10.drawer.lib.DrawerManager;
 import com.evs.android.mysampleapp.week10.drawer.lib.FragmentNavigator;
 import com.evs.android.mysampleapp.week10.drawer.lib.ToolbarManager;
 import com.evs.android.mysampleapp.week9.preference.AppPreferences;
+import com.evs.android.mysampleapp.week9.preference.PrefKeys;
 import com.google.android.material.navigation.NavigationView;
 
 /**
@@ -56,7 +58,8 @@ public class DrawerActivity extends AppCompatActivity {
                         if (mDrawerManager != null)
                             mDrawerManager.closeDrawer();
 
-                        if (AppPreferences.getInstance(DrawerActivity.this).isUserLoggedIn())
+                        if (!TextUtils.isEmpty(AppPreferences.getInstance(DrawerActivity.this)
+                                .getString(PrefKeys.KEY_USER_EMAIL, "")))
                             AppUtils.showToastShort(DrawerActivity.this, "User Logged In");
                         else
                             AppUtils.showToastShort(DrawerActivity.this, "User not Logged In");
@@ -95,7 +98,8 @@ public class DrawerActivity extends AppCompatActivity {
 
     private void setDrawerMenusVisibility() {
         // Setting Drawer Menu Visibility based on user logged in status
-        boolean loggedIn = AppPreferences.getInstance(this).isUserLoggedIn();
+        boolean loggedIn = !TextUtils.isEmpty(AppPreferences.getInstance(DrawerActivity.this)
+                .getString(PrefKeys.KEY_USER_EMAIL, ""));
         mDrawerManager.setDrawerMenuVisible(R.id.mi_drawer_item_sign_in, !loggedIn);
         mDrawerManager.setDrawerMenuVisible(R.id.mi_drawer_item_logout, loggedIn);
     }

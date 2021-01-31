@@ -33,7 +33,7 @@ public class ActivityB extends AppCompatActivity {
         findViewById(R.id.btnLogout).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                AppPreferences.getInstance(ActivityB.this).logoutUser();
+                AppPreferences.getInstance(ActivityB.this).clearAll();
                 finish();
             }
         });

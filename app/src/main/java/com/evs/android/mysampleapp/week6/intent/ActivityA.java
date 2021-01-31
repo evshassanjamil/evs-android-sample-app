@@ -2,6 +2,7 @@ package com.evs.android.mysampleapp.week6.intent;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
@@ -12,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.evs.android.mysampleapp.R;
 import com.evs.android.mysampleapp.utils.AppUtils;
 import com.evs.android.mysampleapp.week9.preference.AppPreferences;
+import com.evs.android.mysampleapp.week9.preference.PrefKeys;
 
 /**
  * Created by hassanjamil on 01/29/2020.
@@ -28,8 +30,9 @@ public class ActivityA extends AppCompatActivity {
 
         AppPreferences appPreferences = AppPreferences.getInstance(this);
 
-        if (appPreferences.isRememberLogin() && appPreferences.isUserLoggedIn()) {
-            moveToNext(appPreferences.getUserName());
+        if (appPreferences.getBoolean(PrefKeys.KEY_REMEMBER_ME, false)
+                && !TextUtils.isEmpty(appPreferences.getString(PrefKeys.KEY_USER_EMAIL, ""))) {
+            moveToNext(appPreferences.getString(PrefKeys.KEY_USER_NAME, ""));
         }
 
         setContentView(R.layout.activity_a);
@@ -74,7 +77,9 @@ public class ActivityA extends AppCompatActivity {
                         } else {
                             etPassword.setError(null);
                             // Saving Preferences
-                            appPreferences.saveLoginSession(name, email, remember);
+                            appPreferences.putString(PrefKeys.KEY_USER_NAME, name);
+                            appPreferences.putString(PrefKeys.KEY_USER_EMAIL, email);
+                            appPreferences.putBoolean(PrefKeys.KEY_REMEMBER_ME, remember);
                             // Move to next activity
                             moveToNext(name);
                         }
